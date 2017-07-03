@@ -1,0 +1,2 @@
+<h2>PCs</h2>
+<pc-display *ngFor="let pc of pcs | async;trackBy pc?.$key" [pc]="pc"></pc-display>

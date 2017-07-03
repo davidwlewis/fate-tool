@@ -1,0 +1,7 @@
+<div>
+  <md-button-toggle-group multiple>
+  <md-button-toggle *ngFor="let t of track | keys;trackBy t" [checked]="track[t]" (change)="track[t]=$event.source.checked;change.emit()">
+    <md-icon [style.color]="color" [svgIcon]="icon"></md-icon>
+  </md-button-toggle>
+</md-button-toggle-group>
+</div>

@@ -1,0 +1,9 @@
+<md-card style="padding:12px;">
+  <button md-icon-button *ngIf="aspect?.invokes" style="float:right; background-color: #990000;"><md-icon>exposure_plus_2</md-icon></button>
+  <md-card-header style="margin-top: 0px">
+    <md-card-title>{{aspect?.name}}</md-card-title>
+    <md-card-subtitle>{{aspect?.type}}</md-card-subtitle>
+    <div md-card-avatar (click)="collapsed = !collapsed"><md-icon style="margin:8px;">{{collapsed ? 'expand_more' : 'expand_less'}}</md-icon></div>
+  </md-card-header>
+  <md-card-content *ngIf="!collapsed">{{aspect?.description}}</md-card-content>
+</md-card>

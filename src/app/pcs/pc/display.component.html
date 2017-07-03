@@ -1,0 +1,22 @@
+
+<md-card style="width:400px;">
+<button md-icon-button style="float:right;"><md-icon>menu</md-icon></button>
+  <md-card-header>
+    <md-card-title>{{pc.name}}</md-card-title>
+    <md-card-subtitle>{{pc.slug}}</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <stress-display [track]="physicalStress | async" [color]="'#990000'" [icon]="'heart'"></stress-display>
+  </md-card-content>
+  <md-card-content>
+    <stress-display [track]="mentalStress | async" [color]="'#000099'" [icon]="'brain'"></stress-display>
+  </md-card-content>
+  <md-card-content>
+    <aspect-display *ngIf="pc.consequence_mild" [aspect]="pc.consequence_mild"></aspect-display>
+    <aspect-display *ngIf="pc.consequence_moderate" [aspect]="pc.consequence_moderate"></aspect-display>
+    <aspect-display *ngIf="pc.consequence_severe" [aspect]="pc.consequence_severe"></aspect-display>
+  </md-card-content>
+  <md-card-content>
+    <aspect-list-display [attachment]="pc.$key"></aspect-list-display>
+  </md-card-content>
+</md-card>

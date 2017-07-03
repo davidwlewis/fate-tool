@@ -1,0 +1,52 @@
+- module names singular
+
+- split Display and Control components
+  - may players open Control as a dialogue?
+  - GM workspace all Control all the time? Tabbed?
+
+aspect
+- aspect.module
+- aspect.service
+- aspect-display.component
+- aspect-control.component
+
+character
+- character.module
+- character.service
+- character-display.component
+- character-control.component
+  stress-track
+  - stress-track.service
+  - stress-track.component
+  background
+
+display / per scene (tabbed? panes? tree?) { consider how to showcase, as well as show/hide elements }
+ - campaign
+ - scene
+ (- zones?)
+ - npcs
+ - pcs
+
+control
+ - as above
+
+backend.module [service provider]
+
+Details:
+Name
+Slug
+
+Status:
+Stress Tracks
+Mild/Moderate/Severe Consequence
+
+(PC only: need to store that somewhere)
+Background:
+High Concept
+Trouble
+Background
+Crossing Paths I
+Crossing Paths II
+
+Aspects:
+?
